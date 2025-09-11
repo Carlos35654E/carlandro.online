@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes Archive</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="titulo-header">
+        <h1>Contact</h1>
+         </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Men.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+        </ul>
+        </nav>
+   </header>
+
+    <main>
+        <h2>CONTACT US</h2>
+        <form class="contact-form" action="/enviar_mensaje.php" method="post">
+            <label for="nombre">Name:</label><br>
+            <input type="text" id="name" name="nombre"><br><br>
+            <label for="correo">Mail:</label><br>
+            <input type="email" id="mail" name="correo"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="mensaje"></textarea><br><br>
+            <button type="button" onclick="borrar()" id="send">Send</button>
+        </form>
+        <div class="contact-directly">
+            <h3 style="font-family: 'Playfair Display';">Contact us directly by mail or phone</h3>
+            <p><b>Mail:</b> <a href="mailto:tu-correo@ejemplo.com">contact@clothesarchives.com</a></p>
+            <p><b>Phone:</b> +503 1234 5678</p>
+        </div>    
+    </main>
+
+
+       <footer>
+    <div class="footer-redes">
+      <p>
+        Follow us:
+        <a href="#" aria-label="Facebook">Facebook</a> |
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </p>
+    </div>
+    <div class="footer-copy">
+      <p>© 2025 Clothes Archive. All Rights Reserved </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
