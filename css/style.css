@@ -8,10 +8,10 @@
 }
 
 body {
-    display: flex; /* Convierte el cuerpo en un contenedor flexible */
-    flex-direction: column; /* Apila los elementos verticalmente */
-    min-height: 100vh; /* Ocupa al menos el 100% de la altura de la ventana */
-    margin: 0; /* Elimina el margen por defecto del body */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: black;
@@ -161,7 +161,7 @@ main {
 
 .algo {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: larger;
 }
 

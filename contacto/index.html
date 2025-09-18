@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INFRAMEN</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contacto.css">
     <link rel="icon" type="image/x-icon" href="../img/INlogoFavicon.ico">
-    <script src="../js/fire-base.js"></script>
 </head>
 <body>
    <header>
         <div class="encabezado-superior">
             <div class="logo-y-titulo">
-                <img src="img/INlogo.png" alt="" class="logo">
+                <img src="../img/INlogo.png" alt="" class="logo">
                 <h1 id="titulo">INFRAMEN</h1>
             </div>
         </div>
@@ -21,10 +20,36 @@
                 <li><a href="../">Principal</a></li>
                 <li><a href="../matricula/">Matricula</a></li>
                 <li><a href="../contacto/">Contacto</a></li>
-                <li><a href="../acerca de/">INFRAMEN</a></li>
+                <li><a href="../acerca-de/">INFRAMEN</a></li>
                 <li><a href="../noticias/">Noticias</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="tarjeta-formulario">
+            <h2>¿Tienes dudas? Contactanos.</h2>
+            <form class="contact-form">
+                <label for="name">Nombres y apellidos:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="numero">Número telefónico:</label>
+                <input type="numero" id="numero" name="numero" required>
+
+                <label for="numero-doc" id="etiqueta-documento">Escribe tu DUI:</label>
+                <select name="tipo-documento" id="tipo-documento">
+                    <option value="dui">DUI</option>
+                    <option value="nie">NIE</option>
+                </select>
+                <input type="text"id="numero-doc" name="numero-doc" placeholder="00000000-0" required>
+
+                <label for="message">Razón por la que nos contactas:</label>
+                <textarea placeholder="Mensaje..." id="message" name="message" rows="4" required></textarea>
+
+                <button class="btn-form" type="submit" onclick="enviar()">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="../js/contact.js"></script>
 </body>
 </html>
