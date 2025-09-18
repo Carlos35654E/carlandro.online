@@ -48,6 +48,7 @@ header {
     justify-content: center;
     padding: 10px 0;
     background-color: black;
+    max-width: 100%;
 }
 
 .logo-y-titulo {
@@ -62,10 +63,11 @@ header {
 
 .navegacion-principal {
     background-color: black;
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    max-width: 100%;
 }
 
 .menu {
