@@ -1,41 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-
+* {
+  text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/background-contact.png);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
+}
 #titulo {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 24px;
   color: white;
 }
-
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #000;
-  background-size: cover;
-  color: white;
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: black;
+  max-width: 100%;
 }
-
+.encabezado-superior {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: black;
+  max-width: 100%;
+}
+.logo-y-titulo {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
 .navegacion-principal {
   background-color: black;
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: center;
   padding: 10px 0;
+  max-width: 100%;
 }
-
 .menu {
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
+  gap: 15px;
 }
-
 .menu li {
-  margin: 0 11px;
-  margin-top: -17px;
+  margin: 0;
 }
-
 .menu a {
   color: white;
   text-decoration: none;
@@ -43,18 +89,27 @@ body {
   padding: 6px 0;
   display: block;
 }
-
 .menu a:hover {
   color: red;
 }
-
+main {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
 .container {
   display: flex;
-  flex-wrap: wrap;
-  padding: 40px;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px 20px 40px 20px;
+  text-align: center;
 }
-
+.container h1 {
+  margin-top: 0;
+}
 .left-box {
   flex: 1;
   min-width: 280px;
@@ -63,17 +118,15 @@ body {
   flex-direction: column;
   gap: 20px;
 }
-
 .box {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: black;
   padding: 20px;
   border-radius: 10px;
+  border: 2px solid rgba(228, 22, 22, 0.918);
 }
-
 .box h2 {
   margin-top: 0;
 }
-
 .btn {
   display: inline-block;
   margin-top: 10px;
@@ -85,17 +138,16 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-
 .btn.red {
   background-color: #e74c3c;
 }
-
 .btn.yellow {
   background-color: #f1c40f;
   color: black;
 }
-
 .right-box {
+  display: flex;
+  flex-direction: column;
   flex: 2;
   min-width: 300px;
   background-color: white;
@@ -103,11 +155,9 @@ body {
   border-radius: 10px;
   padding: 20px;
 }
-
 .accordion {
   border-bottom: 1px solid #ccc;
 }
-
 .accordion summary {
   cursor: pointer;
   padding: 10px;
@@ -116,92 +166,165 @@ body {
   border-radius: 5px;
   margin-bottom: 5px;
 }
-
 .accordion p {
   padding: 10px;
   margin: 0;
 }
-
 a {
   color: #3498db;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-}
-
-
-
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #1e1e1e;
-  color: white;
-  background-image: url('https://i.imgur.com/zmMTMGO.png'); /* Fondo con íconos */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .content-box {
   background-color: #fff;
   color: #000;
   padding: 30px;
   border-radius: 10px;
-  max-width: 450px;
+  max-width: 100%;
+  height: auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-
 h1 {
   width: 100%;
   text-align: center;
   font-size: 28px;
   margin-bottom: 30px;
 }
-
 ol {
   padding-left: 20px;
 }
-
 ol li {
   margin-bottom: 15px;
   font-size: 16px;
 }
-
 .image {
   max-width: 650px;
   margin-top: 20px;
 }
-
 .image img {
   width: 100%;
   border-radius: 10px;
 }
+h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.text-box {
+  flex: 0;
+  max-width: 100%;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
+  align-items: center;
+  text-align: center;
+  min-width: 100%;
+}
+.text-box ul {
+  padding-left: 20px;
+}
+.text-box li {
+  margin-bottom: 10px;
+}
+.image-box {
+  max-width: 500px;
+}
+.image-box img {
+  width: 100%;
+  border-radius: 8px;
+}
+strong {
+  color: #222;
+}
+.matricula-antiguo {
+  padding: 40px 20px;
+  text-align: center;
+}
+.matricula-antiguo h2 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.matricula-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.matricula-texto {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+.matricula-texto .verde {
+  color: #39e27a;
+  font-weight: bold;
+}
+.matricula-texto .rojo {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+.matricula-caja {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.matricula-caja h3 {
+  margin-top: 0;
+}
+.matricula-imagen {
+  flex: 1;
+  min-width: 300px;
+}
+.matricula-imagen img {
+  width: 100%;
+  border-radius: 8px;
+}
+.contenido {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1200px;
+  line-height: 1.6;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+ul {
+  columns: 2;
+  list-style: disc;
+  gap: 30px;
+}
+li {
+  margin-bottom: 10px;
+}
+.matricula-texto > p {
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+}
+.beneficios-lista {
+  line-height: 1.5;
+  gap: 15vw;
+  font-size: 1vw;
+}
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
 
-.content-box, .image {
-    max-width: 100%;
-  }
+.active {
+  color: red !important;
 }

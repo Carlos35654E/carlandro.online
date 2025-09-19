@@ -1,51 +1,84 @@
-// Variables para controlar el carrusel
+// Carrusel solo si existe en la página
 const pista = document.querySelector('.carrusel-pista');
-const diapositivas = Array.from(pista.children);
-const siguienteBtn = document.querySelector('.next-btn');
-const anteriorBtn = document.querySelector('.prev-btn');
-const carruselContainer = document.querySelector('.carrusel-imagen-principal');
+if (pista) {
+    const diapositivas = Array.from(pista.children);
+    const siguienteBtn = document.querySelector('.next-btn');
+    const anteriorBtn = document.querySelector('.prev-btn');
+    const carruselContainer = document.querySelector('.carrusel-imagen-principal');
 
-const tamañoDiapositiva = diapositivas[0].getBoundingClientRect().width;
-let indiceDiapositiva = 0;
+    let indiceDiapositiva = 0;
+    let tamañoDiapositiva;
 
-// Variables para el movimiento automático
-let autoplayInterval;
-const autoplayDelay = 3000;
+    let autoplayInterval;
+    const autoplayDelay = 4000;
 
-siguienteBtn.addEventListener('click', () => {
-    indiceDiapositiva++;
-
-    if (indiceDiapositiva >= diapositivas.length) {
-        indiceDiapositiva = 0;
+    function actualizarCarrusel() {
+        const nuevaPosicion = -tamañoDiapositiva * indiceDiapositiva;
+        pista.style.transform = `translateX(${nuevaPosicion}px)`;
     }
 
-    const nuevaPosicion = -tamañoDiapositiva * indiceDiapositiva;
-    pista.style.transform = `translateX(${nuevaPosicion}px)`;
-});
-
-anteriorBtn.addEventListener('click', () => {
-    indiceDiapositiva--;
-
-    if (indiceDiapositiva < 0) {
-        indiceDiapositiva = diapositivas.length - 1;
+    function recalcularTamañoDiapositiva() {
+        tamañoDiapositiva = diapositivas[0].getBoundingClientRect().width;
+        actualizarCarrusel();
     }
 
-    const nuevaPosicion = -tamañoDiapositiva * indiceDiapositiva;
-    pista.style.transform = `translateX(${nuevaPosicion}px)`;
-});
+    siguienteBtn.addEventListener('click', () => {
+        indiceDiapositiva++;
+        if (indiceDiapositiva >= diapositivas.length) {
+            indiceDiapositiva = 0;
+        }
+        actualizarCarrusel();
+    });
 
-function startAutoplay() {
-    autoplayInterval = setInterval(() => {
-        siguienteBtn.click();
-    }, autoplayDelay);
+    anteriorBtn.addEventListener('click', () => {
+        indiceDiapositiva--;
+        if (indiceDiapositiva < 0) {
+            indiceDiapositiva = diapositivas.length - 1;
+        }
+        actualizarCarrusel();
+    });
+
+    function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+            siguienteBtn.click();
+        }, autoplayDelay);
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplayInterval);
+    }
+
+    carruselContainer.addEventListener('mouseenter', stopAutoplay);
+    carruselContainer.addEventListener('mouseleave', startAutoplay);
+
+    window.addEventListener('resize', recalcularTamañoDiapositiva);
+
+    recalcularTamañoDiapositiva();
+    startAutoplay();
 }
 
-function stopAutoplay() {
-    clearInterval(autoplayInterval);
+// ...el resto de tu código (irAPagina, normalizarRuta, cambiarColor) igual...
+
+// Función para el botón "Contáctanos"
+function irAPagina() {
+    window.location.href = '/contacto/';
 }
 
-carruselContainer.addEventListener('mouseenter', stopAutoplay);
+function normalizarRuta(ruta) {
+    // Quita 'index.html' y el slash final
+    return ruta.replace(/index\.html$/, '').replace(/\/$/, '');
+}
 
-carruselContainer.addEventListener('mouseleave', startAutoplay);
+function cambiarColor() {
+    const rutaActual = normalizarRuta(window.location.pathname);
+    const enlaces = document.querySelectorAll('nav a');
+    enlaces.forEach(enlace => {
+        enlace.classList.remove('active');
+        const rutaEnlace = normalizarRuta(enlace.pathname);
+        if (rutaEnlace === rutaActual) {
+            enlace.classList.add('active');
+        }
+    });
+}
 
-startAutoplay();
+cambiarColor()
