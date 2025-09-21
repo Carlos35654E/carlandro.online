@@ -1,48 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+html {
+    overflow-y: scroll;
+}
+
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     min-height: 100vh;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: black;
-    overflow-x: hidden;
+    color: white;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/background-contact.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: 400px 400px;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#titulo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: black;
+    min-width: 100%;
 }
 
 .encabezado-superior {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 5%;
+    padding: 10px 0;
+    margin: 0;
+    max-width: 100%;
     background-color: black;
-    height: auto;
-}
+    width: 100%;
 
-#titulo {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
-    text-align: center;
 }
 
 .logo-y-titulo {
     display: flex;
     align-items: center;
-    color: white;
-    justify-content: center;
+    height: 70px;
 }
 
-.logo {
-    width: 10vw;
-    max-width: 50px;
-    margin-right: 10px;
+ .logo {
+     width: 40px;
+     margin-right: 10px;
 }
 
 .navegacion-principal {
     background-color: black;
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    max-width: 100%;
+    width: 100%;
 }
 
 .menu {
@@ -52,24 +95,25 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
+    
 }
 
 .menu li {
-    margin: 5px 11px;
+    margin: 0;
     margin-top: -17px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 16px;
     padding: 6px 0;
     display: block;
 }
 
 .menu a:hover {
     color: rgb(144, 9, 9);
-    pointer-events: visiblePainted;
 }
 
 main {
