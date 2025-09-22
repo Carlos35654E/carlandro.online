@@ -2,6 +2,7 @@
 
 html {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
@@ -96,7 +97,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    
+    flex-wrap: wrap;
 }
 
 .menu li {
@@ -231,6 +232,20 @@ main {
     text-align: center;
 }
 
+.facebook {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.facebook:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 .boton-texto {
     display: block;
     width: 150px;
@@ -243,6 +258,7 @@ main {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
+    font-size: 1.2rem;
 }
 
 .boton-texto:hover {
