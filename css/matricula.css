@@ -372,14 +372,6 @@ strong {
   border-radius: 8px;
 }
 
-.contenido {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 1200px;
-  line-height: 1.6;
-}
-
 h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -401,13 +393,31 @@ li {
   border-radius: 10px;
 }
 
-.beneficios-lista {
-  line-height: 1.5;
-  gap: 15vw;
-  font-size: 3vh;
+.contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
+#titulo-beneficios {
+  text-align: center;
+  margin-bottom: 20px;
+  margin: auto 10px;
+}
 
+.beneficios-lista {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-right: 10%;
+}
+
+.beneficios-lista li {
+  max-width: 100%;
+}
 
 .active {
   color: red !important;
