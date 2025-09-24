@@ -373,6 +373,10 @@ footer {
     padding: 0;
 }
 
+.active {
+    color: red !important;
+}
+
 @media (max-width: 767px) {
     .carrusel-imagen-principal, footer {
         display: none;
