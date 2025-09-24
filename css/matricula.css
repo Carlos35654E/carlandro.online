@@ -497,8 +497,10 @@ footer {
 
   .container2 {
     flex-direction: column;
-    
   }
+
+  .content-box {
+    max-width: 100%;
 }
 
 @media (max-width: 767px) {
