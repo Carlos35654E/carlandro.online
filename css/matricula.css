@@ -501,6 +501,7 @@ footer {
 
   .content-box {
     max-width: 100%;
+  }
 }
 
 @media (max-width: 767px) {

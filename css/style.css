@@ -276,7 +276,7 @@ main {
 }
 
 .in26 {
-    width: 100%;
+    width: 95%;
     padding: 0;
     margin: 20px auto;
 }
@@ -289,7 +289,7 @@ main {
 }
 
 .faq-container {
-    max-width: 800px;
+    max-width: 70%;
     margin: 40px auto;
     padding: 20px;
     border: 1px solid #ddd;

@@ -5,6 +5,7 @@ html {
     overflow-x: hidden;
 }
 
+
 body {
     display: flex;
     flex-direction: column;
@@ -36,7 +37,6 @@ body::before {
     pointer-events: none;
     z-index: -1;
 }
-
 
 #titulo {
     font-family: 'Playfair Display', serif;
@@ -116,80 +116,91 @@ header {
     color: red;
 }
 
-
-
-.tarjeta-formulario {
+main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.vistazofondo {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 90%;
+    margin-top: 10px;
+    padding: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
     text-align: center;
-    max-width: 400px;
-    margin: 20px 5vw;
-    padding: 50px;
-    background-color: rgb(61, 56, 56);
-    align-items: center;
-}
-
-.contact-form {
-    display: block;
-    margin-bottom: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    cursor: text;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    align-items: center;
-}
-
-#tipo-documento {
     color: white;
-    border-radius: 10px;
-    margin-bottom: 8px;
-    background-color: rgb(102, 102, 102);
-    padding: 8px;
 }
 
-.btn-form {
-    background-color:  #d32828;
+.vistazofondo hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, white, transparent);
+    margin: 20px 0;
+    width: 90%;
+}
+
+.vistazoboton {
+    display: inline-block;
+    background-color: #43036e;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 40px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 2px solid #32035e;
+    letter-spacing: 1px;
+}
+
+.vistazoboton:hover {
+    background-color: #5e05a7;
+    color: #1a1a1a;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all 0.5s;
 }
 
-.btn-form:hover {
-    transform: scale(1.2);
-    background-color: rgb(219, 0, 0);
+#ocultarcontenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.5s ease-in-out, opacity 1s ease-in-out, visibility 1.5s;
+    padding: 100px 40px; 
 }
 
-.tarjeta-formulario h2 {
-    margin-bottom: 20px;
-    margin-top: -20px;
+.mostrar {
+    visibility: visible !important;
+    opacity: 1 !important;     
+    max-height: 2000px !important;
+    transition-delay: 0s;
 }
 
-.active {
-    color: red !important;
+.parrafoo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.tituloo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    max-width: 90%;
 }
 
 footer {
@@ -215,7 +226,17 @@ footer {
     padding: 0;
 }
 
-@media (max-width: 767px) {
+.active {
+    color: red !important;
+}
+
+@media (min-width: 768px) {
+    #tituloo {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
     footer {
         display: none;
     }

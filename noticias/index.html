@@ -1,141 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>noticias</title>
     <link rel="stylesheet" href="../css/noticias.css">
+    <link rel="icon" type="image/x-icon" href="../img/INlogoFavicon.ico">
 </head>
 <body>
-  <header>
-      <div class="encabezado-superior">
-          <div class="logo-y-titulo">
-              <img src="../img/INlogo.png" alt="" class="logo">
-              <h1 id="titulo">INFRAMEN</h1>
-          </div>
-      </div>
-      <nav class="navegacion-principal">
-          <ul class="menu">
-              <li><a href="../">Principal</a></li>
-              <li><a href="../matricula/">Matricula</a></li>
-              <li><a href="../contacto/">Contacto</a></li>
-              <li><a href="../acerca-de/">INFRAMEN</a></li>
-              <li><a href="../noticias/">Noticias</a></li>
-          </ul>
-      </nav>
-  </header>
-<section id="carousel">
-    <div id="card-modal" class="modal">
-        <div class="modal-content" id="modal-card-content"></div>
-    </div>
-
-    <div class="cards-container">
-        <div class="card">
-            <div class="card-img">
-                <img src="imagenes/suprema.jpeg">
-            </div>
-            <div class="card-body">
-                <h3>Titulo1</h3>
-                <p>adwmadosmadnsaumwdosianwiudnjsoiaimwdmsnad
-                    doanfdaiouddoanwfoismaodnwoiadmsouanfoianodnwaodnsa
-                    diauwudanwodinsauwndsoamwdnw
-                    duwndsoianwd
-                    awdadsawdsawdawfdawdajwnduanduoandandnsiuanidnisbad
-                    dwaidbisunaidnsaiunwdinsiuanwdnsaiunwfawndiunwadsnainwds
-                </p>
+   <header>
+        <div class="encabezado-superior">
+            <div class="logo-y-titulo">
+                <img src="../img/INlogo.png" alt="" class="logo">
+                <h1 id="titulo">INFRAMEN</h1>
             </div>
         </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="imagenes/Captura de pantalla 2025-08-05 200024.png">
+        <nav class="navegacion-principal">
+            <ul class="menu">
+                <li><a href="../">Principal</a></li>
+                <li><a href="../matricula/">Matricula</a></li>
+                <li><a href="../contacto/">Contacto</a></li>
+                <li><a href="../noticias/">Noticias</a></li>
+                <li><a href="../acerca-de/">INFRAMEN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="section1">
+                <h2 class="section-title">Noticias Destacadas</h2>
+                <div id="noticias-recientes">
+                    <div class="noticia">
+                        <h2 class="new-title">Inframen celebra "Señorita INFRAMEN"</h2>
+                        <p><em>25-09-2025 - Redacción Inframen</em></p>
+                        <p>El Instituto Nacional Francisco Menéndez celebró el evento "Señorita INFRAMEN".</p>
+                        <img class="missIN" src="../img/chrome_0KX9a8Z8fL.png" alt="">
+                    </div>
+                    <div class="noticia">
+                        <h2 class="new-title">Matricula para estudiantes de noveno grado</h2>
+                        <p><em>01-09-2025 - Redacción Inframen</em></p>
+                        <p>Los estudiantes de noveno grado ya pueden llenar la ficha de inscripción al inframen.</p>
+                        <img src="../img/IN26.jpg" alt="">
+                        <p id="irmatricula" onclick="goToMatricula()" >Ir</p>
+                    
+                    </div>
+                    <div class="noticia">
+                        <h2 class="new-title">Jornada de Orientación Vocacional</h2>
+                        <p><em>20-09-2025 - Redacción Inframen</em></p>
+                        <p>Estudiantes de bachillerato participaron en charlas sobre opciones universitarias y técnicas.</p>
+                        <img src="../img/Charla.jpg" alt="Jornada de Orientación Vocacional">
+                    </div>
+                    <div class="noticia">
+                        <h2 class="new-title">Entrega de Reconocimientos Académicos</h2>
+                        <p><em>01-10-2025 - Redacción Inframen</em></p>
+                        <p>Se reconoció a los estudiantes con mejor rendimiento académico del ciclo 2025.</p>
+                        <img src="../img/graduacion.jpg" alt="Reconocimientos Académicos">
+                    </div>
+                    <div class="noticia">
+                        <h2 class="new-title">Inauguración de Laboratorio de Ciencias</h2>
+                        <p><em>10-09-2025 - Redacción Inframen</em></p>
+                        <p>El instituto inauguró un moderno laboratorio para prácticas de física y química.</p>
+                        <img src="../img/inf.jpeg" alt="Laboratorio de Ciencias">
+                    </div>
+                    <div class="noticia">
+                        <h2 class="new-title">Festival Artístico INFRAMEN 2025</h2>
+                        <p><em>05-09-2025 - Redacción Inframen</em></p>
+                        <p>Alumnos presentaron obras de teatro, música y danza en el festival anual del instituto.</p>
+                        <img src="../img/festival.jpg" alt="Festival Artístico INFRAMEN">
+                    </div>
+                        <div class="noticia">
+                            <h2 class="new-title">Visita de Autoridades Educativas</h2>
+                            <p><em>28-08-2025 - Redacción Inframen</em></p>
+                            <p>El instituto recibió la visita de autoridades del Ministerio de Educación para conocer los avances en infraestructura.</p>
+                            <img src="../img/inf2.jpeg" alt="Visita de Autoridades Educativas">
+                        </div>
+                        <div class="noticia">
+                            <h2 class="new-title">Taller de Robótica para Estudiantes</h2>
+                            <p><em>15-08-2025 - Redacción Inframen</em></p>
+                            <p>Alumnos participaron en un taller de robótica, aprendiendo sobre programación y construcción de robots.</p>
+                            <img src="../img/DS.jpg" alt="Taller de Robótica">
+                        </div>
+                        <div class="noticia">
+                            <h2 class="new-title">Campaña de Salud Escolar</h2>
+                            <p><em>01-08-2025 - Redacción Inframen</em></p>
+                            <p>Se realizó una campaña de salud para promover hábitos saludables entre los estudiantes.</p>
+                            <img src="../img/salud.jpg" alt="Campaña de Salud Escolar">
+                        </div>
+                </div>
+                <hr>
             </div>
-            <div class="card-body">
-                <h3>Titulo2</h3>
-                <p>Contexto</p>
-            </div>
+                        <button id="ir-arriba" style="margin-top:15px;padding:10px 20px;border-radius:20px;border:none;background:red;color:white;cursor:pointer;font-size:1rem;">↑ Ir arriba</button>
         </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="">
-            </div>
-            <div class="card-body">
-                <h3>Titulo3</h3>
-                <p>Contexto</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="">
-            </div>
-            <div class="card-body">
-                <h3>Titulo4</h3>
-                <p>adwmodawidoisamwodmsoaiwdmosaowds
-                    oimdawoidmsoaimwdmsoamfnadwmdsand
-                    iawndsamwdosa,windwoiamwdisawoidmsa
-                    aodnwoamdosamowdjnsaiwmd
-                    wdoanwudmnsoainwdmsoaimwdosnaw
-                    awodno
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="">
-            </div>
-            <div class="card-body">
-                <h3>Titulo5</h3>
-                <p>Contexto</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="">
-            </div>
-            <div class="card-body">
-                <h3>Titulo6</h3>
-                <p>Contexto</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="">
-            </div>
-            <div class="card-body">
-                <h3>Titulo7</h3>
-                <p>Contexto</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="imagenes/zakura 4.png">
-            </div>
-            <div class="card-body">
-                <h3>Titulo8</h3>
-                <p>Contexto</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img">
-                <img src="">
-            </div>
-            <div class="card-body">
-                <h3>Titulo9</h3>
-                <p>Contexto</p>
-            </div>
-        </div>
-    </div>
-    <div class="carousel-buttons">
-        <button id="prev">Anterior</button>
-        <span id="cards-count"></span>
-        <button id="next">Siguiente</button>
-    </div>
-</section>
+        
+    </main>
     <footer>
         <div class="footerlogo">
             <img src="../img/INlogo.png" alt="">
         </div>
         <div>
             <p id="copyright">Copyright © 2025 Instituto Nacional "General Francisco Menéndez". Todos los derechos reservados.</p>
+            <div class="img">
+                <img src="" alt="">
+            </div>
         </div>
     </footer>
     <script src="../js/noticias.js"></script>
