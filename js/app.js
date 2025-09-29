@@ -36,10 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         actualizarCarrusel();
     });
 
-    // Asegúrate de que el carrusel y el texto estén correctamente posicionados al cargar la página.
     actualizarCarrusel();
 
-    window.irAPagina = function() {
-        window.location.href = 'contacto.html';
-    };
+
 });
+
+function irAPagina() {
+    window.location.href = 'contacto/';
+}

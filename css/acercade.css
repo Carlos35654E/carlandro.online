@@ -186,7 +186,7 @@ main {
 .mostrar {
     visibility: visible !important;
     opacity: 1 !important;     
-    max-height: 2000px !important;
+    max-height: 3000px !important;
     transition-delay: 0s;
 }
 
