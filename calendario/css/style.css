@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/background-contact.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: 400px 400px;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+#titulo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: black;
+    min-width: 100%;
+}
+
+.encabezado-superior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: black;
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+.logo-y-titulo {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.navegacion-principal {
+    background-color: black;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+.menu {
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu li {
+    margin: 0;
+    margin-top: -17px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 0;
+    display: block;
+}
+
+.menu a:hover {
+    color: red;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.academic-calendar {
+    list-style: none;
+    padding: 0;
+}
+
+.calendar-item {
+    display: flex; 
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.calendar-item:last-child {
+    border-bottom: none;
+}
+
+.date-box {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-box .month {
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.date-box .day {
+    font-size: 3em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.event-details {
+    flex-grow: 1;
+}
+
+.event-details h3 {
+    margin-top: 0;
+    color: #000000;
+    font-size: 1.5em;
+}
+
+.event-details p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.type-academico .date-box { background-color: #8c0606; }
+.type-cívico .date-box { background-color: #8c0606; }
+.type-vacaciones .date-box { background-color: #8c0606; }
+.type-entrega .date-box { background-color: #8c0606; }
+.type-examen .date-box { background-color: #8c0606; }
+
+@media (max-width: 600px) {
+    .calendar-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .date-box {
+        margin: 0 0 15px 0;
+    }
+    .date-box .day {
+        font-size: 2.5em;
+    }
+    .date-box {
+        width: 80px;
+        height: 80px;
+    }
+}
