@@ -1,3 +1,4 @@
+import os # <-- ¡Añade esto al inicio del archivo!
 from flask import Flask, jsonify, request, abort
 from flask_cors import CORS # Importamos para solucionar el error de seguridad CORS
 import mysql.connector
@@ -6,11 +7,12 @@ from mysql.connector import Error
 # -----------------------------------------------------
 # 1. CONFIGURACIÓN DE LA BASE DE DATOS
 # -----------------------------------------------------
+
 config_db = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': '',
-    'database': 'employees' # TU BASE DE DATOS
+    'host': os.environ.get('MYSQL_HOST'),      # Lee la variable de Railway
+    'user': os.environ.get('MYSQL_USER'),      # Lee la variable de Railway
+    'password': os.environ.get('MYSQL_PASSWORD'), # Lee la variable de Railway
+    'database': os.environ.get('MYSQL_DATABASE') # Lee la variable de Railway
 }
 
 # 2. INICIALIZACIÓN DEL SERVIDOR
