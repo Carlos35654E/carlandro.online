@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         // 3. ¡LA PETICIÓN POST!
-        fetch('http://localhost:5000/api/employees', {
+        fetch('https://carlandroonline-production.up.railway.app/', {
             method: 'POST', // <-- ¡EL MÉTODO ES POST!
             headers: {
                 'Content-Type': 'application/json' // Decimos que enviamos un JSON
