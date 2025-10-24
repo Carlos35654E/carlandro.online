@@ -9,9 +9,9 @@ from mysql.connector import Error
 # -----------------------------------------------------
 
 config_db = {
-    'host': os.environ.get('MYSQL_HOST'),      # Lee la variable de Railway
-    'user': os.environ.get('MYSQL_USER'),      # Lee la variable de Railway
-    'password': os.environ.get('MYSQL_PASSWORD'), # Lee la variable de Railway
+    'host': os.environ.get('MYSQLHOST'),      # Lee la variable de Railway
+    'user': os.environ.get('MYSQLUSER'),      # Lee la variable de Railway
+    'password': os.environ.get('MYSQLPASSWORD'), # Lee la variable de Railway
     'database': os.environ.get('MYSQL_DATABASE') # Lee la variable de Railway
 }
 
