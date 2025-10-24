@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 feedback.textContent = `Error del servidor: ${respuestaPython.error}`;
                 feedback.style.color = 'red';
             } else {
-                feedback.textContent = `¡GUARDADO! ID asignado: ${respuestaPython.id}. Revisa HeidiSQL.`;
+                feedback.textContent = `¡GUARDADO!`;
                 feedback.style.color = 'green';
                 formulario.reset(); // Limpia el formulario
             }
